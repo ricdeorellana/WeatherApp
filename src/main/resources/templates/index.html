@@ -49,6 +49,16 @@
 							th:src="@{${'http://openweathermap.org/img/w/' 
 	                + data.weather[0].get('icon') + '.png'}}">
 					</p>
+
+					<table>
+						<tr>
+							<th>Recent Searches</th>
+						</tr>
+						<tr th:each="zipCode: ${zip_codes}">
+							<td th:text="${zipCode.zipCode}"></td>
+						</tr>
+					</table>
+
 				</div>
 			</div>
 		</div>
