@@ -54,7 +54,7 @@
 						<tr>
 							<th>Recent Searches</th>
 						</tr>
-						<tr th:each="zipCode: ${zip_codes}">
+						<tr th:each="zipCode: ${zip_codes}" th:if="${zipCodeStat.index >= zipCodeStat.size  - 10}" >
 							<td th:text="${zipCode.zipCode}"></td>
 						</tr>
 					</table>
